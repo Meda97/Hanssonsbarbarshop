@@ -1,0 +1,30 @@
+Här är exempel på hur en Robot.txt kan se ut.
+Finns andra funktioner som man kan använda, jag la till bara några för att beskriva lite hur den fungerar.
+
+
+//Blockera hela webbplatsen från alla sökmotorer:
+User-agent: *
+Disallow: /
+
+//Blockera mappen temp:
+User-agent: *
+Disallow: /temp/
+
+//Blockera alla URLer som börjar med konto:
+User-agent: *
+Disallow: /konto
+
+//Blockera särskilda delar från enbart Google:
+User-agent: Googlebot
+Disallow: /temp/
+Disallow: /onödigt/skräpkatalog/
+Disallow: /privat_fil.html
+
+//Blockera och ta bort alla bilder från Google Bildsökning:
+User-agent: Googlebot-Image
+Disallow: /
+
+
+//Visa var din XML-sitemap finns (du kan ange flera):
+Sitemap: http://www.din-domän.com/sitemap.xml
+Sitemap: http://www.din-domän.com/sitemap2.xml
